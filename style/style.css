@@ -1,0 +1,925 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1 {
+  font-family: 'Baumans', cursive;
+  font-size: 48;
+  color: #333;
+}
+
+h2 {
+  font-family: 'Baumans', cursive;
+  font-size: 42;
+  color: #333;
+}
+
+h3 {
+  font-family: 'Baumans', cursive;
+  font-size: 36;
+  color: #333;
+}
+
+h4 {
+  font-family: 'Baumans', cursive;
+  font-size: 30;
+  color: #333;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #444;
+}
+
+li {
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.space {
+  margin: 10px 0;
+}
+
+.link {
+  color: #555;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.logo h1 {
+  font-size: 36px;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+@media only screen and (min-width: 900px) {
+  .logo {
+    margin-left: 30px;
+  }
+}
+
+.logo h1:hover {
+  cursor: pointer;
+  color: cadetblue;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  display: none;
+}
+
+nav ul li {
+  float: right;
+  margin: 0 8px;
+}
+
+@media only screen and (min-width: 900px) {
+  nav ul {
+    display: inline-block;
+  }
+}
+
+nav .nav-phone {
+  background: url("./img/phone.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  nav .nav-phone {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  nav {
+    margin-top: 20px;
+    margin-right: 30px;
+  }
+}
+
+.refe-linkki {
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+@media only screen and (min-width: 900px) {
+  .refe-linkki:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.contact-linkki {
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+@media only screen and (min-width: 900px) {
+  .contact-linkki:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("./img/hero1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 15px 0;
+  margin-bottom: 20px;
+  height: 200px;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+}
+
+.hero .phone-text {
+  display: block;
+  padding: 10px 10px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 900px) {
+  .hero .phone-text {
+    display: none;
+  }
+}
+
+.hero .desktop-text {
+  display: none;
+  padding: 10px 30px;
+  font-size: 22px;
+}
+
+@media only screen and (min-width: 900px) {
+  .hero .desktop-text {
+    display: block;
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 400px;
+  }
+}
+
+.kasvi {
+  margin: 10px auto;
+  background: url("./img/icon_kasvi.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+@media only screen and (min-width: 900px) {
+  .kasvi {
+    margin: 30px auto;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .kasvi:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+#refet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 0 100px;
+  }
+}
+
+#refet #refe1 {
+  background: url("./img/ristaniemi/ristaniemi_valmis.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe1 {
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe1 #refe1-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/tuija_aita.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/tuija_aita.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe2 {
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe2 #refe2-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/soukkaTerde/soukka_valmis.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/soukkaTerde/soukka_valmis.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe3 {
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe3 #refe3-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/Ida/ida_valmis.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/Ida/ida_valmis.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 2px 2px 8px #111;
+  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe4 #refe4-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/kontiot-kiveys/kontiot_valmis.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/kontiot-kiveys/kontiot_valmis.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe5 #refe5-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe6 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/säleikkö/saleikko-valmis.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/säleikkö/saleikko-valmis.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe6 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe6 #refe6-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe7 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/kontiot-istutus/kontiot_istutus1.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/kontiot-istutus/kontiot_istutus1.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe7 #refe7-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe8 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/steffe/steffe_valmis.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/steffe/steffe_valmis.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe8 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe8 #refe8-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+#refet #refe9 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(34, 112, 45, 0.2)), to(rgba(34, 112, 45, 0.2))), url("./img/aita/aita_valmis.jpg");
+  background: linear-gradient(rgba(34, 112, 45, 0.2), rgba(34, 112, 45, 0.2)), url("./img/aita/aita_valmis.jpg");
+  height: 200px;
+  width: 80%;
+  max-width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2px;
+  margin: 10px 0;
+  color: #fff;
+  text-shadow: 5px 1px 10px #333;
+  display: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  #refet #refe9 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    height: 250px;
+    width: 100%;
+  }
+  #refet #refe9 #refe9-text {
+    display: none;
+    font-size: 22px;
+    margin: 40px 0;
+  }
+}
+
+.ruoho {
+  margin: 0 auto;
+  background: url("./img/icon_ruoho.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+@media only screen and (min-width: 900px) {
+  .ruoho {
+    margin: 20px auto;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .ruoho:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+#contact-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid {
+    max-width: 400px;
+  }
+}
+
+#contact-grid .phone-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid .phone-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#contact-grid .phone-container .phone {
+  background: url("./img/phone.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+}
+
+#contact-grid .phone-container #phone-number {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid .phone-container #phone-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#contact-grid .pic1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: url("./img/profile1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: solid 2px black;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid .pic1 {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+#contact-grid .mail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid .mail-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#contact-grid .mail-container .mail {
+  background: url("./img/mail.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+}
+
+#contact-grid .mail-container #mail-adress {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid .mail-container #mail-adress {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#contact-grid .pic2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: url("./img/profile2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: solid 2px black;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid .pic2 {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+#contact-grid .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  height: 60px;
+  width: 60px;
+}
+
+#contact-grid .name p {
+  font-size: 20px;
+  font-family: 'Baumans', cursive;
+  color: #222;
+  text-align: center;
+}
+
+#contact-grid .pic3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: url("./img/profile3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: solid 2px black;
+}
+
+@media only screen and (min-width: 900px) {
+  #contact-grid .pic3 {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  padding: 25px 0;
+  height: 200px;
+  background-color: #333;
+  color: #999;
+  font-size: 18px;
+}
+
+footer a {
+  color: #999;
+}
+
+#hide {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  #hide {
+    display: none;
+  }
+}
+
+#show {
+  display: block;
+}
+
+@media only screen and (min-width: 900px) {
+  #show {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

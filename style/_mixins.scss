@@ -1,0 +1,14 @@
+
+
+@mixin img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@mixin desktop {
+    @media only screen and (min-width: 900px) {
+        @content;
+    }
+}
